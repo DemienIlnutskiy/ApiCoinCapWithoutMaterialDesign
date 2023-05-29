@@ -1,0 +1,25 @@
+﻿<Application x:Class="Cryptoriencies.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+                <ResourceDictionary Source="Themes/LightTheme.xaml"/>
+                <ResourceDictionary Source="Themes/PlaceHolder.xaml"/>
+                
+                <ResourceDictionary Source="SwitchLanguage/LanguageAboutCryptaDictionary.en.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageAboutCryptaDictionary.ua.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageMainMenuDictionary.en.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageMainMenuDictionary.ua.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageRegisterDictionary.en.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageRegisterDictionary.ua.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageAuthDictionary.en.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageAuthDictionary.ua.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageCalculatorDictionary.en.xaml"/>
+                <ResourceDictionary Source="SwitchLanguage/LanguageCalculatorDictionary.ua.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

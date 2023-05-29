@@ -1,0 +1,99 @@
+﻿<Window x:Class="Cryptoriencies.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cryptoriencies"
+        mc:Ignorable="d"
+        Title="{DynamicResource StrMainMenu}" Height="700" Width="1100"
+        Background="{DynamicResource BackgoundStyle}"
+        MinWidth="1100" MinHeight="700" x:Name="MainWindowCrypta" WindowStartupLocation="CenterScreen" Icon="/icon.png">
+
+    <Grid x:Name="Container" MinWidth="500" MinHeight="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0" x:Name="GridRow3"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Foreground="{DynamicResource ForegroundStyle}" x:Name="CountCrypta"
+                       TextWrapping="Wrap" TextAlignment="Center"/>
+            <ComboBox x:Name="Laguage" Grid.Column="1">
+                <ComboBoxItem Style="{DynamicResource ComboBoxItemStyle}" Background="{DynamicResource BackgoundStyle}"
+    Content="{DynamicResource StrUkrain}" IsSelected="True" x:Name="LanguageUkrain" Selected="LanguageUkrain_Selected"/>
+                <ComboBoxItem Style="{DynamicResource ComboBoxItemStyle}" Background="{DynamicResource BackgoundStyle}"
+    Content="{DynamicResource StrEnglish}" x:Name="LanguageEnglish" Selected="LanguageEnglish_Selected"/>
+            </ComboBox>
+            <WrapPanel Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                <CheckBox x:Name="DarkModeToggle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Foreground="{DynamicResource ForegroundStyle}" Text="{DynamicResource StrDark}" HorizontalAlignment="Right" 
+                           Margin="10 0 0 0" VerticalAlignment="Center"/>
+            </WrapPanel>
+            <Button Grid.Column="3" Content="{DynamicResource StrDiagram}" x:Name="Diagram"
+        Style="{StaticResource ButtonStyle}" Click="Diagram_Click"/>
+            <Button Grid.Column="4" Content="{DynamicResource StrCalculaotr}" x:Name="Calculator"
+        Style="{StaticResource ButtonStyle}" Click="Calculator_Click"/>
+            <Button Grid.Column="5" Content="{DynamicResource StrLogin}" 
+                    Style="{StaticResource ButtonStyle}" Click="Button_Enter_Click"/>
+            <Button Grid.Column="6" Content="{DynamicResource StrRegister}"
+                    Style="{StaticResource ButtonStyle}" Click="Button_Reg_Click"/>
+        </Grid>
+
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1"  Grid.Column="1" VerticalAlignment="Center" Margin="0 20" >
+            <StackPanel Orientation="Horizontal">
+                <TextBox Name="TBoxSearch" Width="225" Style="{StaticResource placeHolder}" Background="{DynamicResource BackgoundStyle}"
+                         TextChanged="TBoxSearch_TextChanged" Tag="{DynamicResource StrEnterSearch}"
+                         LostFocus="TBoxSearch_LostFocus" GotFocus="TBoxSearch_GotFocus"
+                         Foreground="{DynamicResource ForegroundStyle}"/>
+            </StackPanel>
+        </WrapPanel>
+        <ListView x:Name="lvInfCript2" Grid.Row="2" Grid.Column="1" Visibility="Hidden" HorizontalAlignment="Center" 
+                  VerticalAlignment="Center" Background="{DynamicResource BackgoundStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding Path=Name}" 
+                               Foreground="{DynamicResource ForegroundStyle}" Width="200"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView SelectionChanged="lvInfCript_SelectionChanged" x:Name="lvInfCript" Grid.Row="3" Grid.Column="1"
+                  Foreground="{DynamicResource ForegroundStyle}" Background="{DynamicResource BackgoundStyle}">
+            <ListView.View>
+                <GridView ColumnHeaderContainerStyle="{DynamicResource GridViewHeaderStyle}">
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Rank}" Header="{DynamicResource StrRank}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Header="{DynamicResource StrName}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Symbol}" Header="{DynamicResource StrSymbol}"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Supply}" Header="{DynamicResource StrSupply}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MaxSupply}" Header="{DynamicResource StrMaxSupply}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=MarketCapUsd}" Header="{DynamicResource StrMarketCapUsd}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=VolumeUsd24Hr}" Header="{DynamicResource StrVolumeUsd24Hr}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=PriceUsd}" Header="{DynamicResource StrPriceUsd}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=ChangePercent24Hr}" Header="{DynamicResource StrChangePercent24Hr}" />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Vwap24Hr}" Header="{DynamicResource StrVwap24Hr}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <local:RegisterControl x:Name="registerControl" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="3" 
+                               Grid.Column="0" Visibility="Collapsed"/>
+        <local:AuthControl x:Name="authControl" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Grid.Column="0" 
+                           Visibility="Collapsed" />
+        <local:Calculator x:Name="CalculatorControl" IsVisibleChanged="CalculatorControl_IsVisibleChanged"
+                          Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="3" Grid.Column="0" Visibility="Collapsed"/>
+    </Grid>
+</Window>

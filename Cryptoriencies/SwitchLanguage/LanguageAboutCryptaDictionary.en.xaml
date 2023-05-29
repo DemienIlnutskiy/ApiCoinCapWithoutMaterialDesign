@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="StrAboutCrypta">About crypta</system:String>
+    <system:String x:Key="StrUkrain">Ukrain</system:String>
+    <system:String x:Key="StrEnglish">English</system:String>
+    <system:String x:Key="StrDark">Dark theme</system:String>
+    <system:String x:Key="StrNightMode">Night mode</system:String>
+    <system:String x:Key="StrMenu">Menu</system:String>
+</ResourceDictionary>

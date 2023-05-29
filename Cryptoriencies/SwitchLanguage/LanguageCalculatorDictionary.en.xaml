@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="StrDiagram">Diagram</system:String>
+    <system:String x:Key="StrMenu">Menu</system:String>
+    <system:String x:Key="StrCalculator">Calculator</system:String>
+    <system:String x:Key="StrChoseCryptocurrency">Chose cryptocurrency</system:String>
+    <system:String x:Key="StrChoseCryptocurrency2">Choose second cryptocurrency</system:String>
+    <system:String x:Key="StrEnterQuantity">enter quantity</system:String>
+    <system:String x:Key="StrPriceCryptocurrency">Price cryptocurrency</system:String>
+    <system:String x:Key="StrFinalSum">Sum</system:String>
+    <system:String x:Key="StrCalculate">Calculate</system:String>
+</ResourceDictionary>

@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="StrMainMenu">Ринок криптовалют</system:String>
+    <system:String x:Key="StrCryptocurrencies">Криптовалюти: </system:String>
+    <system:String x:Key="StrUkrain">Український</system:String>
+    <system:String x:Key="StrEnglish">Англійський</system:String>
+    <system:String x:Key="StrDark">Темна тема</system:String>
+    <system:String x:Key="StrNightMode">Нічний режим</system:String>
+    <system:String x:Key="StrDiagram">Діаграма</system:String>
+    <system:String x:Key="StrCalculaotr">Калькулятор</system:String>
+    <system:String x:Key="StrLogin">Увійти</system:String>
+    <system:String x:Key="StrRegister">Зареєструватись</system:String>
+    <system:String x:Key="StrEnterSearch">Пошук</system:String>
+    <system:String x:Key="StrRank">Місце</system:String>
+    <system:String x:Key="StrName">Ім'я</system:String>
+    <system:String x:Key="StrSymbol">Позначка</system:String>
+    <system:String x:Key="StrSupply">Поставки</system:String>
+    <system:String x:Key="StrMaxSupply">Максимальна кількість</system:String>
+    <system:String x:Key="StrMarketCapUsd">Ринкова капіталізація USD</system:String>
+    <system:String x:Key="StrVolumeUsd24Hr">Обсяг USD за 24г.</system:String>
+    <system:String x:Key="StrPriceUsd">Ціна в Usd</system:String>
+    <system:String x:Key="StrChangePercent24Hr">Зміна відсотака за 24г.</system:String>
+    <system:String x:Key="StrVwap24Hr">Середня ціна за 24г.</system:String>
+</ResourceDictionary>

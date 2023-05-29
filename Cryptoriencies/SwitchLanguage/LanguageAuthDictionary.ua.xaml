@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="StrAuthorisation">Авторизаця</system:String>
+    <system:String x:Key="StrRegister">Реєстрація</system:String>
+    <system:String x:Key="StrLogin">Ввійти</system:String>
+    <system:String x:Key="StrEnterLogin">Введіть логін</system:String>
+    <system:String x:Key="StrEnterPassword">Введіть пароль</system:String>
+    <system:String x:Key="StrEnter">Ввійти</system:String>
+</ResourceDictionary>

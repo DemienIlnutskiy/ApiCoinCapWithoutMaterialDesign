@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Cryptoriencies.Calculator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" x:Name="CalculaotrControler"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#7f000000">
+        <Border MinWidth="400" Margin="15" Background="{DynamicResource BackgoundStyle}" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20"
+                x:Name="CalculatorBackground">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <Grid>
+                    <Button Style="{StaticResource ButtonStyle}" Grid.Column="3" Content="{DynamicResource StrDiagram}" 
+                            Click="Diagram_Button_Click" HorizontalAlignment="Left" FontSize="20"/>
+                    <Button Style="{StaticResource ButtonStyle}" Grid.Column="3" Content="{DynamicResource StrMenu}" 
+                            Click="Menu_Button_Click" HorizontalAlignment="Right" FontSize="20"/>
+                </Grid>
+                <TextBlock Foreground="{DynamicResource ForegroundStyle}" Text="{DynamicResource StrCalculator}"
+                           FontSize="30" FontWeight="Bold" Margin="0 20 0 20"/>
+                <Label HorizontalAlignment="Center" Content="{DynamicResource StrChoseCryptocurrency}" 
+                       Foreground="{DynamicResource ForegroundStyle}"/>
+                <ComboBox x:Name="CBcryptocurrency" IsReadOnly="True"
+                          SelectionChanged="CBcryptocurrency_SelectionChanged">
+                    <ComboBox.ItemTemplate
+>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" Foreground="{DynamicResource ForegroundStyle}" 
+                                           Background="{DynamicResource BackgoundStyle}" Width="500"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Label HorizontalAlignment="Center" Content="{DynamicResource StrChoseCryptocurrency2}" Foreground="{DynamicResource ForegroundStyle}"/>
+                <ComboBox x:Name="CBcryptocurrency2" IsReadOnly="True"
+                          SelectionChanged="CBcryptocurrency2_SelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}" Foreground="{DynamicResource ForegroundStyle}"
+                                           Background="{DynamicResource BackgoundStyle}" Width="500"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="SwitchCrypta" Tag="{DynamicResource StrEnterQuantity}" Grid.Column="0" 
+                             Style="{DynamicResource placeHolder}" FontSize="14" Background="{DynamicResource BackgoundStyle}"
+                             IsReadOnly="True" Foreground="{DynamicResource ForegroundStyle}" />
+                    <TextBox x:Name="SwitchCrypta2" Foreground="{DynamicResource ForegroundStyle}" Grid.Column="2"
+                             Style="{StaticResource placeHolder}" FontSize="14" IsReadOnly="True" Background="{DynamicResource BackgoundStyle}"
+                             Tag="{DynamicResource StrPriceCryptocurrency}"/>
+                </Grid>
+                <TextBox x:Name="TextSum" Foreground="{DynamicResource ForegroundStyle}" Grid.Column="2"
+                             Style="{StaticResource placeHolder}" IsReadOnly="True" FontSize="18" Background="{DynamicResource BackgoundStyle}"
+                             Tag="{DynamicResource StrFinalSum}" TextWrapping="Wrap"/>
+                <Button
+    IsEnabled="False" Style="{StaticResource ButtonStyle}" Content="{DynamicResource StrCalculate}" Margin="0 20" x:Name="Sum" 
+                            Click="Sum_Click"/>
+                <Label x:Name="UnCorrectData" HorizontalAlignment="Center" Foreground="{DynamicResource ForegroundStyle}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="StrDiagram">Діаграма</system:String>
+    <system:String x:Key="StrMenu">Меню</system:String>
+    <system:String x:Key="StrCalculator">Калькулятор</system:String>
+    <system:String x:Key="StrChoseCryptocurrency">Виберіть криптовалюту</system:String>
+    <system:String x:Key="StrChoseCryptocurrency2">Виберіть Другу криптовалюту</system:String>
+    <system:String x:Key="StrEnterQuantity">Введіть кількість</system:String>
+    <system:String x:Key="StrPriceCryptocurrency">Ціна криптовалюти</system:String>
+    <system:String x:Key="StrFinalSum">Вартість</system:String>
+    <system:String x:Key="StrCalculate">Обчислити</system:String>
+</ResourceDictionary>
