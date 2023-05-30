@@ -106,9 +106,9 @@ namespace Cryptoriencies
 			Crypta selectItem = (Crypta)CBcryptocurrency.SelectedItem;
 			Crypta selectItem2 = (Crypta)CBcryptocurrency2.SelectedItem;
 			UnCorrectData.Content = "";
-			double crypta1,crypta2;
-			crypta1 = Double.Parse(SwitchCrypta.Text.Remove(0, 1), numberFormat);
-			crypta2 = Double.Parse(SwitchCrypta2.Text.Remove(0, 1), numberFormat);
+			decimal crypta1,crypta2;
+			crypta1 = Decimal.Parse(SwitchCrypta.Text.Remove(0, 1), numberFormat);
+			crypta2 = Decimal.Parse(SwitchCrypta2.Text.Remove(0, 1), numberFormat);
 			TextSum.Text ="1 "+ selectItem.Name+" = "+ Convert.ToString(crypta1/crypta2)+" "+ selectItem2.Name;
 		}
 	}
